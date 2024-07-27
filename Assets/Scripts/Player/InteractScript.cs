@@ -1,27 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class InteractScript : MonoBehaviour
-{
-    public float interactDiastance = 5f;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, interactDiastance))
-            {
-                if (hit.collider.CompareTag("Door_A"))
-                {
-                    hit.collider.transform.parent.GetComponent<DoorScript>().ChangeDoorState();
-                }
-
-
-            }
-        }
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86c8cd8c74367fc68cd58899c489925955cc52c204706c1a396c49671a5469bd
+size 670
