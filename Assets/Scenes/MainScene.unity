@@ -47020,7 +47020,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &869866719
 MonoBehaviour:
@@ -47053,7 +47053,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869866717}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 78f0dacd9d382cd47b3ca468a37b2035, type: 3}
   m_Controller: {fileID: 9100000, guid: 646dc8df426cc9e4a94d297ffa9faf94, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -53516,7 +53516,7 @@ PrefabInstance:
     - target: {fileID: 8311818270684656983, guid: 1bb6376b5cbbc5b41862981ca66c2aa0,
         type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8508512370543703046, guid: 1bb6376b5cbbc5b41862981ca66c2aa0,
         type: 3}
@@ -59371,6 +59371,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030971912, guid: abc00000000013664053346225658435, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030971914, guid: abc00000000013664053346225658435, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
