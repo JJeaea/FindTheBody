@@ -2,25 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Naming : MonoBehaviour
 {
-    public InputField playerNameInput;
+    public TMP_InputField playerNameInput;
+    public NetworkManager networkManager;
     private string playerName = null;
 
     private void Awake()
     {
-        playerName = playerNameInput.GetComponent<InputField>().text;
+        playerNameInput.onEndEdit.AddListener(OnNameInputEnd);
     }
 
-    private void Update()
+    private void OnNameInputEnd(string name)
     {
-        if(playerName.Length > 1 && playerName.Length <11)
+        if (name.Length > 1 && name.Length < 20)
         {
-            playerName = playerNameInput.text;
-            GameManager.instance.SettingPlayerName(playerName);
+            GameManager.instance.SettingPlayerName(name);
+            playerName = name;
+
+            Debug.Log("Player Name: " + playerName);
+
+            networkManager.Connect();
         }
     }
 
-    
+
 }
