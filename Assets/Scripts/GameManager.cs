@@ -35,6 +35,17 @@ public class GameManager : MonoBehaviour
         return playerName;
     }
 
+    private string roomName;
+
+    public void SettingRoomName(string Name)
+    {
+        roomName = Name;
+    }
+
+    public string OutputRoomName()
+    {
+        return roomName;
+    }
 
     public void OnPlayerDead()
     {
