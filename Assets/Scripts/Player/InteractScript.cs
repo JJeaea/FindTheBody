@@ -40,7 +40,8 @@ public class InteractScript : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hit.collider.transform.parent.GetComponent<DoorScript>().ChangeDoorState();
+                    GameObject.Find(hit.collider.gameObject.name).GetComponent<DoorScript>().ChangeDoorState();
+                    //hit.collider.transform.parent.GetComponent<DoorScript>().ChangeDoorState();
                 }
 
             }

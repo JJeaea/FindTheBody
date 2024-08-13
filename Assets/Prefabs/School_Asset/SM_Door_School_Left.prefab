@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   doorOpenAngle: 0
-  doorCloseAngle: -90
+  doorCloseAngle: 90
   smoot: 5
 --- !u!65 &3593630049005906593
 BoxCollider:
