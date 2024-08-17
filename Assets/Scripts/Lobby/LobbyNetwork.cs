@@ -88,4 +88,17 @@ public class LobbyNetwork : MonoBehaviourPunCallbacks
             }
         }
     }
+
+    private int characterIndex = 0;
+
+    
+    public void SulleChoice()
+    {
+        characterIndex = 0;
+    }
+
+    public void StudentChoice()
+    {
+        characterIndex = 1;
+    }
 }
