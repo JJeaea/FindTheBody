@@ -30234,29 +30234,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 592272343}
-  - component: {fileID: 592272342}
+  - component: {fileID: 592272344}
   m_Layer: 0
-  m_Name: NetworkManager
+  m_Name: MainSceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &592272342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592272341}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33b88e44899e86f4ea44d9c21ae711cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusText: {fileID: 0}
-  roomInput: {fileID: 0}
-  NickNameInput: {fileID: 0}
 --- !u!4 &592272343
 Transform:
   m_ObjectHideFlags: 0
@@ -30272,6 +30257,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &592272344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592272341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee6f22a109e6ec4f9ed94b2d0d09a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sullePrefab: {fileID: 0}
+  studentPrefab: {fileID: 0}
 --- !u!1001 &593084952
 PrefabInstance:
   m_ObjectHideFlags: 0

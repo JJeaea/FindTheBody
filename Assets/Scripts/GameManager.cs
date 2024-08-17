@@ -47,6 +47,34 @@ public class GameManager : MonoBehaviour
         return roomName;
     }
 
+    // select
+
+    private Dictionary<string, string> playerRoles = new Dictionary<string, string>(); // 플레이어 이름과 역할 저장
+
+    public void SetPlayerRole(string playerName, string role)
+    {
+        if (playerRoles.ContainsKey(playerName))
+        {
+            playerRoles[playerName] = role;
+        }
+        else
+        {
+            playerRoles.Add(playerName, role);
+        }
+    }
+
+    public string GetPlayerRole(string playerName)
+    {
+        return playerRoles.ContainsKey(playerName) ? playerRoles[playerName] : null;
+    }
+
+    public string GetMyRole()
+    {
+        string playerName = OutputPlayerName();
+        return GetPlayerRole(playerName);
+    }
+
+
     public void OnPlayerDead()
     {
         isGameover = true;

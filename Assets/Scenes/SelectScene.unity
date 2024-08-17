@@ -3559,6 +3559,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameText: {fileID: 1547398976}
+  sulleButton: {fileID: 1988751700}
+  studentButton1: {fileID: 959869955}
+  studentButton2: {fileID: 274322221}
+  studentButton3: {fileID: 917137490}
+  studentButton4: {fileID: 752881668}
+  studentButton5: {fileID: 1339611835}
+  studentButton6: {fileID: 671785883}
 --- !u!1 &1933380110
 GameObject:
   m_ObjectHideFlags: 0
