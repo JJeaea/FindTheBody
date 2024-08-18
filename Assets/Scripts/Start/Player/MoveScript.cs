@@ -8,6 +8,12 @@ public class MoveScript : MonoBehaviour
     private float walkSpeed;
 
     [SerializeField]
+    private float RunSpeed;
+
+    [SerializeField]
+    private float SitSpeed;
+
+    [SerializeField]
     private float lookSensitivity;
 
     [SerializeField]
@@ -17,11 +23,14 @@ public class MoveScript : MonoBehaviour
     [SerializeField]
     private Camera theCamera;
     private Rigidbody myRigid;
+    Animator animator;
 
+    bool SitState=false;
     // Start is called before the first frame update
     void Start()
     {
         myRigid = GetComponent<Rigidbody>();  // private
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,13 +44,54 @@ public class MoveScript : MonoBehaviour
     private void Move()
     {
         float _moveDirX = Input.GetAxisRaw("Horizontal");
-        float _moveDirZ = Input.GetAxisRaw("Vertical");
+        float _moveDirZ = Input.GetAxisRaw("Vertical");     
         Vector3 _moveHorizontal = transform.right * _moveDirX;
         Vector3 _moveVertical = transform.forward * _moveDirZ;
+        
+        
 
-        Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * walkSpeed;
+        if(_moveDirX != 0 || _moveDirZ != 0) // 걷는 상태일때
+        {
+            Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * walkSpeed;
+            myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+        }
+        else if(Input.GetButton("Run")) // 뛰는 상태일떄
+        {
+            Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * RunSpeed;
+            myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+        }
+        else if (SitState == false) //앉은 상태일때
+        {
+            Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * SitSpeed;
+            myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+        }
 
-        myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+        animator.SetBool("isRunning", Input.GetButton("Run"));
+
+        if(Input.GetButtonDown("Sit"))
+        {
+            SitState = !SitState;
+            animator.SetBool("isSitting", SitState);
+
+        }
+        
+
+        Debug.Log("Run = " + Input.GetButton("Run"));
+        Debug.Log("Sit = " + Input.GetButtonDown("Sit"));
+
+        if (_moveDirZ < 0)
+        {
+            animator.SetInteger("isWalking", 2);
+        }
+        else if (_moveDirX == 0 && _moveDirZ == 0)
+        {
+            animator.SetInteger("isWalking", 0);
+        }
+        else if (_moveDirZ >= 0)
+        {
+            animator.SetInteger("isWalking", 1);
+        }
+    
     }
 
     private void CameraRotation()
