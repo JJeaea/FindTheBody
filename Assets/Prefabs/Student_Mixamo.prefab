@@ -1085,6 +1085,7 @@ GameObject:
   - component: {fileID: 5844269174497651824}
   - component: {fileID: 6865043038710565133}
   - component: {fileID: 7138287170053323618}
+  - component: {fileID: 688514489582772561}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1101,7 +1102,7 @@ Transform:
   m_GameObject: {fileID: 2127227732276005074}
   serializedVersion: 2
   m_LocalRotation: {x: -0.014734872, y: 0.99923265, z: 0.010670529, w: 0.034686442}
-  m_LocalPosition: {x: 0.019, y: 1.52, z: -0.053}
+  m_LocalPosition: {x: 0.08, y: 1.83, z: -1.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1140,7 +1141,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 59
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1210,6 +1211,22 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &688514489582772561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127227732276005074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b790a98eeee0c5b40af9da73431665f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDiastance: 1
+  InteractText: {fileID: 0}
+  InteractPanel: {fileID: 0}
+  isAction: 0
 --- !u!1 &2136300864590835132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,7 +5080,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.7453976, y: 0.2000004, z: 14.480197}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4639072142545802950}
@@ -5105,6 +5122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
+  RunSpeed: 4
+  SitSpeed: 1
   lookSensitivity: 2
   cameraRotationLimit: 45
   theCamera: {fileID: 5844269174497651824}

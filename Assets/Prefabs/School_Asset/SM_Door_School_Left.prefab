@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
+  doorAngle: Y
   doorOpenAngle: 0
   doorCloseAngle: 90
   smoot: 5
