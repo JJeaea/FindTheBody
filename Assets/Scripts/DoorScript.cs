@@ -17,7 +17,7 @@ public class DoorScript : MonoBehaviour
 
     public void ChangeDoorState()
     {
-        Debug.Log("함수호출");
+        //Debug.Log("함수호출");
         open = !open;
     }
 
