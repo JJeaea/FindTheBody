@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3602255058923580153}
   - component: {fileID: 3956080199057699391}
   m_Layer: 0
-  m_Name: door2
+  m_Name: cabinet_door (2)
   m_TagString: Door_A
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,8 +143,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.73672146, y: 0.67468613, z: 1.1246374}
-  m_Center: {x: -0.19619532, y: -0.035236973, z: 0.55649483}
+  m_Size: {x: 0.73672146, y: 0.67257375, z: 1.1246374}
+  m_Center: {x: -0.19619529, y: 0.09916351, z: 0.5564949}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 4438044822175747546}
   - component: {fileID: 3403542013252847813}
   m_Layer: 0
-  m_Name: door1
+  m_Name: cabinet_door (1)
   m_TagString: Door_A
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

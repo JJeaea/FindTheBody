@@ -1102,7 +1102,7 @@ Transform:
   m_GameObject: {fileID: 2127227732276005074}
   serializedVersion: 2
   m_LocalRotation: {x: -0.014734872, y: 0.99923265, z: 0.010670529, w: 0.034686442}
-  m_LocalPosition: {x: 0.08, y: 1.83, z: -1.04}
+  m_LocalPosition: {x: 0.01, y: 1.57, z: 0.068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5065,7 +5065,7 @@ GameObject:
   - component: {fileID: 5719473047939912416}
   m_Layer: 0
   m_Name: Student_Mixamo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5122,7 +5122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
-  RunSpeed: 4
+  RunSpeed: 4.5
   SitSpeed: 1
   lookSensitivity: 2
   cameraRotationLimit: 45

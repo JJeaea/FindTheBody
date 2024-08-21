@@ -50,22 +50,29 @@ public class MoveScript : MonoBehaviour
         
         
 
-        if(_moveDirX != 0 || _moveDirZ != 0) // 걷는 상태일때
-        {
-            Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * walkSpeed;
-            myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
-        }
-        else if(Input.GetButton("Run")) // 뛰는 상태일떄
+        
+        if(Input.GetButton("Run") == true) // 뛰는 상태일떄
         {
             Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * RunSpeed;
             myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+            Debug.Log("뛰는상태" + _velocity);
+
         }
-        else if (SitState == false) //앉은 상태일때
+        else if (SitState == true) //앉은 상태일때
         {
             Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * SitSpeed;
             myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+            Debug.Log("앉은상태" + _velocity);
+        }
+        else // 걷는 상태일때
+        {
+            Vector3 _velocity = (_moveHorizontal + _moveVertical).normalized * walkSpeed;
+            myRigid.MovePosition(transform.position + _velocity * Time.deltaTime);
+            Debug.Log("걷는상태" + _velocity);
+
         }
 
+        
         animator.SetBool("isRunning", Input.GetButton("Run"));
 
         if(Input.GetButtonDown("Sit"))
