@@ -26,6 +26,7 @@ public class InteractScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, interactDiastance))
         {
+            Debug.Log(hit.collider.gameObject.name);
 
             if (hit.collider.CompareTag("Door_A"))
             {

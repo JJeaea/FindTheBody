@@ -76,8 +76,8 @@ public class MoveScript : MonoBehaviour
         }
         
 
-        Debug.Log("Run = " + Input.GetButton("Run"));
-        Debug.Log("Sit = " + Input.GetButtonDown("Sit"));
+        //Debug.Log("Run = " + Input.GetButton("Run"));
+        //Debug.Log("Sit = " + Input.GetButtonDown("Sit"));
 
         if (_moveDirZ < 0)
         {
