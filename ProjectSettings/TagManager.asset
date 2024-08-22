@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door_A
   - Coffin
+  - Body
   layers:
   - Default
   - TransparentFX

@@ -3503,6 +3503,7 @@ GameObject:
   - component: {fileID: 5446289952144831838}
   - component: {fileID: 8196276654468154932}
   - component: {fileID: 2138173738312515599}
+  - component: {fileID: 7336705568210891478}
   m_Layer: 0
   m_Name: Ghost_Mixamo
   m_TagString: Player
@@ -3617,6 +3618,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7336705568210891478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168683995954417746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee67439b396341e4d83ec1a647d0b143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followDuration: 10
+  followSpeed: 3
+  youDieImage: {fileID: 0}
 --- !u!1 &7272448706292073214
 GameObject:
   m_ObjectHideFlags: 0
