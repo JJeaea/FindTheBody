@@ -28,6 +28,7 @@ public class InteractScript : MonoBehaviour
         {
             Debug.Log(hit.collider.gameObject.name);
 
+            // 문 상호작용
             if (hit.collider.CompareTag("Door_A"))
             {
                 Debug.Log("문 발견");
@@ -48,6 +49,27 @@ public class InteractScript : MonoBehaviour
                 }
 
             }
+            
+            // 관 상호작용
+            else if(hit.collider.CompareTag("Coffin"))
+            {
+                if (isAction == true) //이미 창이 띄워져 있다면 끄기
+                {
+                    isAction = false;
+                    InteractPanel.SetActive(false);
+                }
+                isAction = true; // 창이 띄워져있는 상태인가
+                InteractText.text = "[E] 넣기";
+                InteractPanel.SetActive(true); // 창 활성화
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("E키 누름");
+                    //GameObject.Find(hit.collider.gameObject.name).GetComponent<DoorScript>().ChangeDoorState();
+                    //관에 넣는 스크립트 넣기
+                }
+            }
+            
             /* //아이템 추가나 새로운 태그 추가 시 여기에 추가
             else if(hit.collider.CompareTag("Item"))
             {

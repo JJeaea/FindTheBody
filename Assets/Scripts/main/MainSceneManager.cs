@@ -41,9 +41,11 @@ public class MainSceneManager : MonoBehaviourPunCallbacks
     {
         Vector3[] spawnPoints = new Vector3[]
         {
-            new Vector3(0, 1, 0),
-            new Vector3(2, 1, 2),
-            new Vector3(-2, 1, -2),
+            new Vector3(-10, 1, 2),
+            new Vector3(-10, 1, 1),
+            new Vector3(-11, 1, 0),
+            new Vector3(-10, 1, -1),
+            new Vector3(-9, 1, 0),
 
             // 여기서 위치 바꿔주시면 됩니다
         };

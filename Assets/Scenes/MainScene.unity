@@ -26159,6 +26159,33 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1457465357}
   m_Enabled: 1
+--- !u!1 &508988058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000012552175638, guid: d5eed0a5b6a34b34482815ba18f3d9a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1186005970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &508988063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508988058}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.629767, y: 1.1012549, z: 1.9259499}
+  m_Center: {x: 0.04235792, y: 0.54967713, z: 0.016530216}
 --- !u!4 &509871730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3253650434806171496, guid: f3e22668f997fcf47953c54aba4a7715,
@@ -65511,6 +65538,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coffin_Brown
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010258754554, guid: d5eed0a5b6a34b34482815ba18f3d9a2, type: 3}
+      propertyPath: m_TagString
+      value: Coffin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012552175638, guid: d5eed0a5b6a34b34482815ba18f3d9a2, type: 3}
+      propertyPath: m_TagString
+      value: Coffin
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012671860064, guid: d5eed0a5b6a34b34482815ba18f3d9a2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -65558,7 +65593,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000012552175638, guid: d5eed0a5b6a34b34482815ba18f3d9a2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 508988063}
   m_SourcePrefab: {fileID: 100100000, guid: d5eed0a5b6a34b34482815ba18f3d9a2, type: 3}
 --- !u!1 &1187413269
 GameObject:
@@ -71123,6 +71162,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 369243564}
     m_Modifications:
+    - target: {fileID: 100002, guid: f63df71161fd98c4191fdbc25700aa62, type: 3}
+      propertyPath: m_Name
+      value: cabinet_door (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: f63df71161fd98c4191fdbc25700aa62, type: 3}
       propertyPath: m_Name
       value: cabinet (1)
@@ -120046,17 +120089,17 @@ PrefabInstance:
     - target: {fileID: 8518599081248155871, guid: cf99308dcefce0945a2b7b7c8f1f59cc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.565
+      value: -9.02
       objectReference: {fileID: 0}
     - target: {fileID: 8518599081248155871, guid: cf99308dcefce0945a2b7b7c8f1f59cc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.197
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8518599081248155871, guid: cf99308dcefce0945a2b7b7c8f1f59cc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.426
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 8518599081248155871, guid: cf99308dcefce0945a2b7b7c8f1f59cc,
         type: 3}
@@ -120420,7 +120463,7 @@ PrefabInstance:
     - target: {fileID: 5868723449835941904, guid: 548f305df9e2fb14d965b86f418f98bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.652
+      value: -12.36
       objectReference: {fileID: 0}
     - target: {fileID: 5868723449835941904, guid: 548f305df9e2fb14d965b86f418f98bb,
         type: 3}
@@ -120430,7 +120473,7 @@ PrefabInstance:
     - target: {fileID: 5868723449835941904, guid: 548f305df9e2fb14d965b86f418f98bb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.635358
+      value: 16.41
       objectReference: {fileID: 0}
     - target: {fileID: 5868723449835941904, guid: 548f305df9e2fb14d965b86f418f98bb,
         type: 3}
@@ -120471,6 +120514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ghost_Mixamo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168683995954417746, guid: 548f305df9e2fb14d965b86f418f98bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
