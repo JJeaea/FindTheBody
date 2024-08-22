@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8c9bd567ceb9f54058001f89ac69371b850c1a99cf0657dc07d09986cf274151
-size 901
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DoorScript : MonoBehaviour
+{
+    public bool open = false;
+    public float doorOpenAngle = 90f;
+    public float doorCloseAngle = 0f;
+    public float smoot = 2f;
+
+    void Start()
+    {
+
+    }
+
+    public void ChangeDoorState()
+    {
+        open = !open;
+    }
+
+    void Update()
+    {
+        if (open)
+        {
+            Quaternion targetRotation = Quaternion.Euler(0, doorOpenAngle, 0);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, smoot * Time.deltaTime);
+        }
+        else
+        {
+            Quaternion targetRotation2 = Quaternion.Euler(0, doorCloseAngle, 0);
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation2, smoot * Time.deltaTime);
+        }
+
+    }
+}
