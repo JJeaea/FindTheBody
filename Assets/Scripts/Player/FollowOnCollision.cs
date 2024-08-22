@@ -20,7 +20,11 @@ public class FollowOnCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+<<<<<<< Updated upstream
         if (collision.gameObject.CompareTag("student"))
+=======
+        if (collision.gameObject.CompareTag("Player"))
+>>>>>>> Stashed changes
         {
             target = collision.gameObject;
             StartCoroutine(FollowAndDisplayImage());
